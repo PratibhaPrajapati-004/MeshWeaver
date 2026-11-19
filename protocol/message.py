@@ -2,13 +2,12 @@ import json, uuid, time
 
 MSG_TYPES = {"PING", "PONG", "TASK", "RESULT"}
 
-def make_message(msg_type, sender_id, payload=None):
+def make_message(msg_type, sender, payload=None):
     return {
         "type": msg_type,
-        "sender_id": sender_id,
+        "sender": sender,
         "payload": payload or {},
-        "id": str(uuid.uuid4()),
-        "ts": time.time(),
+        "message_id": str(uuid.uuid4()),
     }
 
 def encode(msg) -> bytes:
