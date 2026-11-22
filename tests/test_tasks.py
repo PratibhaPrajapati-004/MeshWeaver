@@ -1,8 +1,8 @@
 import asyncio
 import unittest
 
-from net.network import UDPNode\nfrom net.tasks import TaskRuntime, RemoteTaskError
-
+from net.network import UDPNode
+from net.tasks import TaskRuntime, RemoteTaskError
 
 def multiply(a, b):
     return a * b
